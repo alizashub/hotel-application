@@ -3,15 +3,14 @@ package com.pluralsight;
 public class Reservation {
     private String roomType;
     private double roomPrice;
-    private double weekendRoomPrice;
+    private boolean isWeekend;
     private int numberOfNights;
 
 
-
-    public Reservation(String roomType, double roomPrice, double weekendRoomPrice, int numberOfNights) {
-        this.roomPrice = roomPrice;
+    public Reservation(String roomType, double roomPrice, boolean isWeekend, int numberOfNights) {
         this.roomType = roomType;
-        this.weekendRoomPrice = weekendRoomPrice;
+        this.roomPrice = roomPrice;
+        this.isWeekend = isWeekend;
         this.numberOfNights = numberOfNights;
     }
 
@@ -23,12 +22,14 @@ public class Reservation {
         return roomPrice;
     }
 
-    public double getWeekendRoomPrice() {
-        return weekendRoomPrice;
+    public boolean getIsWeekend() {
+        return isWeekend;
     }
 
     public int getNumberOfNights() {
         return numberOfNights;
     }
-}
+
+    }
+
 

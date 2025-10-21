@@ -28,10 +28,17 @@ public class Employee {
         return department;
     }
 
+    public double getEmployeeHoursWorked() {
+        return employeeHoursWorked;
+    }
 
+    public double getEmployeePayRate() {
+        return employeePayRate;
+    }
 
-
-
+    public double getTotalPay() {
+        return employeePayRate * employeeHoursWorked;
+    }
 
 
 }
