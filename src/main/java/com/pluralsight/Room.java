@@ -5,15 +5,13 @@ public class Room {
     private double roomPrice;
     private boolean isDirty;
     private boolean isOccupied;
-    private boolean isAvalible;
 
 
-    public Room(int numberOfBeds, double roomPrice, boolean isAvalible, boolean isOccupied, boolean isDirty) {
+    public Room(int numberOfBeds,boolean isOccupied, boolean isDirty) {
         this.numberOfBeds = numberOfBeds;
         this.roomPrice = roomPrice;
         this.isDirty = isDirty;
         this.isOccupied = isOccupied;
-        this.isAvalible = isAvalible;
 
     }
 
@@ -39,6 +37,8 @@ public class Room {
         } else {
             return false;
         }
+
+
     }
 }
 
