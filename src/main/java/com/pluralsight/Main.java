@@ -25,9 +25,15 @@ public class Main {
         System.out.println("Total Cost : $"+ reservation1.getReservationPriceTotal());
 
 
-        Employee employee1 = new Employee("A521", "Aliza","HR", 25.0, 45 );
+        Employee employee1 = new Employee("A521", "Aliza","HR", 25.0, 56 );
         System.out.println("\nYour Name : " + employee1.getEmployeeName());
-        System.out.println("Hours You Worked :" +employee1.getEmployeeHoursWorked());
+        System.out.println("Regular Hours Worked: " + employee1.getRegularHours());
+        System.out.println("Overtime Hours Worked: " + employee1.getOvertime());
+
+        System.out.println("Total Pay : $" + employee1.getTotalPay());
+
+//        employee1.punchIn();
+//        employee1.punchOut();
 
 
     }

@@ -52,6 +52,7 @@ public class Room {
         if (this.isOccupied) {
             this.isDirty = true;
             this.isOccupied = false;
+            return true;
         } else {
             return false;
         }

@@ -8,6 +8,7 @@ public class Employee {
     private String department;
     private double employeePayRate;
     private double employeeHoursWorked;
+    private boolean atWork;
 
 
     public Employee(String employeeId, String employeeName, String department, double employeePayRate, double employeeHoursWorked) {
@@ -16,7 +17,10 @@ public class Employee {
         this.department = department;
         this.employeePayRate = employeePayRate;
         this.employeeHoursWorked = employeeHoursWorked;
+        this.atWork = false;
     }
+
+    // getters
 
     public String getEmployeeId() {
         return employeeId;
@@ -38,8 +42,22 @@ public class Employee {
         return employeePayRate;
     }
 
-    public double getTotalPay() {
-        return employeePayRate * employeeHoursWorked;
+    public boolean isAtWork() {
+        return atWork;
+    }
+
+    public double getRegularHours(){
+        return Math.min(employeeHoursWorked,40);
+    }
+
+    public  double getOvertime(){
+        return Math.max(employeeHoursWorked - 40, 0);
+    }
+
+    public double getTotalPay(){
+        double regularPay = getRegularHours() * employeePayRate;
+        double overtimePay = getOvertime() * (employeePayRate * 1.5);
+        return regularPay + overtimePay;
     }
 
     public boolean punchIn(){

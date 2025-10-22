@@ -11,7 +11,7 @@ public class Reservation {
         this.roomType = roomType;
         this.isWeekend = isWeekend;
         this.numberOfNights = numberOfNights;
-        // using a method inside to limit repeated if else code
+        // using a method inside to limit repeated if else code and calculate room price based on room type and if its a weekend
         updatePriceBasedOnRoomTypeAndWeekend();
     }
 
@@ -31,6 +31,8 @@ public class Reservation {
             roomPrice = roomPrice * 1.10;
         }
     }
+
+    // getters
     public int getNumberOfNights() {
         return numberOfNights;
     }
@@ -47,6 +49,9 @@ public class Reservation {
         return isWeekend;
     }
 
+    // setters
+    // to re calculate price based on room type and weekend price increase
+
     public void setRoomType(String roomType) {
         this.roomType = roomType;
         updatePriceBasedOnRoomTypeAndWeekend();
@@ -61,6 +66,7 @@ public class Reservation {
         this.numberOfNights = numberOfNights;
     }
 
+    // calculate total cost of reservation
     public double getReservationPriceTotal(){
         return roomPrice * numberOfNights;
     }
