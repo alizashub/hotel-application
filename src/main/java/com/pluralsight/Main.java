@@ -24,16 +24,28 @@ public class Main {
         System.out.println("Number of nights: " + reservation1.getNumberOfNights());
         System.out.println("Total Cost : $"+ reservation1.getReservationPriceTotal());
 
-
+        System.out.println("Let's See Your Employee Information");
         Employee employee1 = new Employee("A521", "Aliza","HR", 25.0, 56 );
         System.out.println("\nYour Name : " + employee1.getEmployeeName());
         System.out.println("Regular Hours Worked: " + employee1.getRegularHours());
         System.out.println("Overtime Hours Worked: " + employee1.getOvertime());
 
-        System.out.println("Total Pay : $" + employee1.getTotalPay());
+        System.out.println("\nTotal Pay : $" + employee1.getTotalPay());
+
+        System.out.println(employee1.getEmployeeName() + "Your Time Sheet:");
+        System.out.println("\n");
 
         employee1.punchIn();
         employee1.punchOut();
+
+        System.out.println("\n");
+
+        Hotel myHotel = new Hotel("\nHotel Mangrove", 3, 21);
+        System.out.println("Total Available Suites : " + myHotel.getAvalibleSuites());
+        System.out.println("Total Available Basic Rooms : " + myHotel.getAvalibleBasicRooms());
+
+
+
 
 
     }
