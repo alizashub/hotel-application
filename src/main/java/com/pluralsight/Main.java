@@ -32,8 +32,8 @@ public class Main {
 
         System.out.println("Total Pay : $" + employee1.getTotalPay());
 
-//        employee1.punchIn();
-//        employee1.punchOut();
+        employee1.punchIn();
+        employee1.punchOut();
 
 
     }

@@ -65,6 +65,7 @@ public class Employee {
             System.out.println("Already at work, can't punch in.");
             return false;
         } else {
+            this.atWork = true;
             System.out.println("Punching in at:" + LocalTime.now());
             this.atWork = true;
             return true;
