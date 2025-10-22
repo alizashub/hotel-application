@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.time.LocalTime;
+
 public class Employee {
     private String employeeId;
     private String employeeName;
@@ -38,6 +40,29 @@ public class Employee {
 
     public double getTotalPay() {
         return employeePayRate * employeeHoursWorked;
+    }
+
+    public boolean punchIn(){
+        if (this.atWork) {
+            System.out.println("Already at work, can't punch in.");
+            return false;
+        } else {
+            System.out.println("Punching in at:" + LocalTime.now());
+            this.atWork = true;
+            return true;
+
+        }
+    }
+
+    public boolean punchOut(){
+        if(!this.atWork) {
+            System.out.println("Not at work, can not punch out.");
+            return false;
+        } else {
+            System.out.println("Punching out at:" + LocalTime.now());
+            this.atWork = false;
+            return true;
+        }
     }
 
 

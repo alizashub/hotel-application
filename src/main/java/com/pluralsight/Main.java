@@ -5,7 +5,7 @@ public class Main {
 
 
         System.out.println("Welcome To Hotel Mangrove");
-        Room room1 = new Room(2, false, false);
+        Room room1 = new Room(2, false, 196, true);
 
         System.out.println("Room 1 has: " + room1.getNumberOfBeds() + " beds.");
         System.out.println("Room 1 has price : $" + room1.getRoomPrice());
