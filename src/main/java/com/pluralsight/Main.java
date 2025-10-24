@@ -5,11 +5,11 @@ public class Main {
 
 
         System.out.println("Welcome To Hotel Mangrove");
-        Room room1 = new Room(2, false, 196, true);
+        Room room1 = new Room(2, false, true);
 
         System.out.println("Room 1 has: " + room1.getNumberOfBeds() + " beds.");
         System.out.println("Room 1 has price : $" + room1.getRoomPrice());
-        if (room1.isAvalible()) {
+        if (room1.isAvailable()) {
             System.out.println("You Room Is Available.");
         } else {
             System.out.println("Room Is Not Available Right Now. ");
